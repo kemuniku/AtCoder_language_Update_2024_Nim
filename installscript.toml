@@ -104,6 +104,10 @@ library.bignum = { license = [
 library.Nim-ACL = { license = [
     { name = 'CC0 1.0 Universal', url = 'https://github.com/zer0-star/Nim-ACL/blob/master/LICENSE' },
 ], version =  '0.1.0'}
+library.gmp = { license = [
+    { name = 'GNU GPL v2', url = 'https://gmplib.org/' },
+    { name = 'GNU LGPL v3', url = 'https://gmplib.org/' },
+], version =  '0.1.0'}
 
 # キー: filename
 # 型:   文字列
@@ -141,6 +145,7 @@ export PATH=$HOME/.nimble/bin:$PATH
 nimble install neo -y
 sudo apt install libopenblas-base -y
 nimble install https://github.com/zer0-star/Nim-ACL
+sudo apt install -y libgmp3-dev
 nimble install bignum -y
 '''
 
