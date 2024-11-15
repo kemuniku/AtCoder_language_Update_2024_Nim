@@ -107,7 +107,7 @@ library.Nim-ACL = { license = [
 library.gmp = { license = [
     { name = 'GNU GPL v2', url = 'https://gmplib.org/' },
     { name = 'GNU LGPL v3', url = 'https://gmplib.org/' },
-], version =  '0.1.0'}
+], version =  '6.3.0'}
 
 # キー: filename
 # 型:   文字列
