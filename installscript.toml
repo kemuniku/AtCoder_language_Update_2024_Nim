@@ -99,7 +99,7 @@ library.neo = { license = [
     { name = 'Apache-2.0', url = 'https://github.com/andreaferretti/neo/blob/master/LICENSE' },
 ], version = '0.3.5' }
 library.bignum = { license = [
-    { name = 'MIT', url = 'https://github.com/FedeOmoto/bignum/blob/master/LICENSE' },
+    { name = 'MIT', url = 'https://github.com/SciNim/bignum/blob/master/LICENSE' },
 ], version = '1.0.0' }
 library.Nim-ACL = { license = [
     { name = 'CC0 1.0 Universal', url = 'https://github.com/zer0-star/Nim-ACL/blob/master/LICENSE' },
