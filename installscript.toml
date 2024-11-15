@@ -122,7 +122,7 @@ library.bigints = { license = [
 # 例:   'Main.c'
 #       'Main.cpp'
 #       'src/main.rs'
-filename = 'Main.Nim'
+filename = 'Main.nim'
 
 # キー: install
 # 型:   文字列
