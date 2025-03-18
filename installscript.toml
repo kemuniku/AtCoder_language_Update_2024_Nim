@@ -143,6 +143,7 @@ filename = 'Main.nim'
 
 install = '''
 sudo apt update && sudo apt install -y curl xz-utils g++ git
+export CHOOSENIM_CHOOSE_VERSION=2.2.2
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
 export PATH=$HOME/.nimble/bin:$PATH
 nimble install neo -y
