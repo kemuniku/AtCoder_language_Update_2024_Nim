@@ -151,6 +151,7 @@ chmod +x llvm.sh
 sudo ./llvm.sh 19 all
 sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-19 1
 sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 1
+export CHOOSENIM_CHOOSE_VERSION=2.2.2
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
 export PATH=$HOME/.nimble/bin:$PATH
 nimble install neo -y
