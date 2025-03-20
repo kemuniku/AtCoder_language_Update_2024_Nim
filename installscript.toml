@@ -142,7 +142,15 @@ filename = 'Main.nim'
 #       インストールスクリプトが終了したあとで /tmp 以下のものは削除されます
 
 install = '''
+cd /tmp
+sudo ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime && sudo bash -c 'echo Etc/UTC > /etc/timezone'
 sudo apt update && sudo apt install -y curl xz-utils g++ git
+sudo apt install -y lsb-release wget software-properties-common gnupg
+wget https://apt.llvm.org/llvm.sh
+chmod +x llvm.sh
+sudo ./llvm.sh 19 all
+sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-19 1
+sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 1
 export CHOOSENIM_CHOOSE_VERSION=2.2.2
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
 export PATH=$HOME/.nimble/bin:$PATH
