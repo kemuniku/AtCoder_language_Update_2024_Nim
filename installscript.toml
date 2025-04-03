@@ -72,7 +72,7 @@ version = '2.2.0'
 # 説明: コンパイラ/インタプリタのライセンス
 #       コンパイラ、インタプリタの実装のライセンスを記述してください
 #       デュアルライセンスなど、ライセンスが複数ある場合はすべて記述してください
-license = [{ name = 'MIT license', url = 'https://github.com/nim-lang/Nim/blob/devel/copying.txt' }]
+license = [{ name = 'MIT', url = 'https://github.com/nim-lang/Nim/blob/v2.2.2/copying.txt' }]
 
 # キー: library
 # 型:   テーブル
@@ -96,20 +96,20 @@ license = [{ name = 'MIT license', url = 'https://github.com/nim-lang/Nim/blob/d
 #       そのためインストールスクリプトで記述されるものと一致するようにしてください
 # 例:   boost = { license = [ { name = 'Boost Software License', url = 'https://www.boost.org/LICENSE_1_0.txt' } ], version = '1.86.0' }
 library.neo = { license = [
-    { name = 'Apache-2.0', url = 'https://github.com/andreaferretti/neo/blob/master/LICENSE' },
+    { name = 'Apache-2.0', url = 'https://github.com/andreaferretti/neo/blob/0.3.5/LICENSE' },
 ], version = '0.3.5' }
 library.bignum = { license = [
-    { name = 'MIT', url = 'https://github.com/SciNim/bignum/blob/master/LICENSE' },
-], version = '1.0.0' }
+    { name = 'MIT', url = 'https://github.com/SciNim/bignum/blob/1.0.4/LICENSE' },
+], version = '1.0.4' }
 library.Nim-ACL = { license = [
-    { name = 'CC0 1.0 Universal', url = 'https://github.com/zer0-star/Nim-ACL/blob/master/LICENSE' },
+    { name = 'CC0-1.0', url = 'https://github.com/zer0-star/Nim-ACL/blob/master/LICENSE' },
 ], version =  '0.1.0'}
 library.gmp = { license = [
-    { name = 'GNU GPL v2', url = 'https://gmplib.org/' },
-    { name = 'GNU LGPL v3', url = 'https://gmplib.org/' },
+    { name = 'GPL-2.0-or-later', url = 'https://gmplib.org/repo/gmp-6.3/file/tip/COPYINGv2' },
+    { name = 'LGPL-3.0-or-later', url = 'https://gmplib.org/repo/gmp-6.3/file/tip/COPYING.LESSERv3' },
 ], version =  '6.3.0'}
 library.bigints = { license = [
-    { name = 'MIT License', url = 'https://github.com/nim-lang/bigints/blob/master/license.txt' },
+    { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/v1.1.0/license.txt' },
 ], version = '1.1.0' }
 
 # キー: filename
