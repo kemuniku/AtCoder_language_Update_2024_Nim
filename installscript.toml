@@ -111,6 +111,10 @@ library.gmp = { license = [
 library.bigints = { license = [
     { name = 'MIT License', url = 'https://github.com/nim-lang/bigints/blob/master/license.txt' },
 ], version = '1.1.0' }
+library.mpfr = { license = [
+    { name = 'GPL-3.0-or-later', url = 'https://gitlab.inria.fr/mpfr/mpfr/-/raw/4.2.1/COPYING' },
+    { name = 'LGPL-3.0-or-later', url = 'https://gitlab.inria.fr/mpfr/mpfr/-/raw/4.2.1/COPYING.LESSER' },
+], version = '4.2.1' }
 
 # キー: filename
 # 型:   文字列
@@ -160,6 +164,7 @@ nimble install https://github.com/zer0-star/Nim-ACL
 sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
+sudo apt install -y libmpfr-dev
 '''
 
 # キー: compile
