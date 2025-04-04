@@ -111,6 +111,9 @@ library.gmp = { license = [
 library.bigints = { license = [
     { name = 'MIT License', url = 'https://github.com/nim-lang/bigints/blob/master/license.txt' },
 ], version = '1.1.0' }
+library.'AC Library' = { license = [
+    { name = 'CC0-1.0', url = 'https://github.com/atcoder/ac-library/blob/v1.5.1/LICENSE' },
+], version =  'v1.5.1' }
 
 # キー: filename
 # 型:   文字列
@@ -160,6 +163,9 @@ nimble install https://github.com/zer0-star/Nim-ACL
 sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
+wget https://github.com/atcoder/ac-library/archive/refs/tags/v1.5.1.tar.gz
+tar -xvf v1.5.1.tar.gz
+sudo cp -r ac-library-1.5.1/atcoder /usr/local/include
 '''
 
 # キー: compile
