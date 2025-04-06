@@ -114,6 +114,9 @@ library.bigints = { license = [
 library.Eigen = { license = [
     { name = 'MPL-2.0', url = 'https://gitlab.com/libeigen/eigen/-/blob/3.4.0/COPYING.MPL2' },
 ], version =  '3.4.0' }
+library.fftw = { license = [
+    { name = 'GPL-3.0-or-later', url = 'https://fftw.org/fftw3_doc/License-and-Copyright.html' },
+], version =  '3.3.10' }
 
 # キー: filename
 # 型:   文字列
@@ -163,6 +166,7 @@ nimble install https://github.com/zer0-star/Nim-ACL
 sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
+sudo apt install -y libfftw3-dev
 wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
 tar -xvf eigen-3.4.0.tar.gz
 cd eigen-3.4.0
