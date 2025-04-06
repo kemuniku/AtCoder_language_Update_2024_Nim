@@ -111,6 +111,9 @@ library.gmp = { license = [
 library.bigints = { license = [
     { name = 'MIT License', url = 'https://github.com/nim-lang/bigints/blob/master/license.txt' },
 ], version = '1.1.0' }
+library.Arraymancer = { license = [
+    { name = 'Apache-2.0', url = 'https://github.com/mratsim/Arraymancer/blob/84af537af1bc1f90229fff2b90abf5e5c1b02616/LICENSE' },
+], version =  '84af537af1bc1f90229fff2b90abf5e5c1b02616' }
 
 # キー: filename
 # 型:   文字列
@@ -160,6 +163,7 @@ nimble install https://github.com/zer0-star/Nim-ACL
 sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
+nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
 '''
 
 # キー: compile
