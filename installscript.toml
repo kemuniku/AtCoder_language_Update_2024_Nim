@@ -111,6 +111,9 @@ library.gmp = { license = [
 library.bigints = { license = [
     { name = 'MIT License', url = 'https://github.com/nim-lang/bigints/blob/master/license.txt' },
 ], version = '1.1.0' }
+library.boost = { license = [
+    { name = 'BSL-1.0', url = 'https://www.boost.org/users/license.html' },
+], version =  '1.87.0' }
 
 # キー: filename
 # 型:   文字列
@@ -144,13 +147,14 @@ filename = 'Main.nim'
 install = '''
 cd /tmp
 sudo ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime && sudo bash -c 'echo Etc/UTC > /etc/timezone'
-sudo apt update && sudo apt install -y curl xz-utils g++ git
+sudo apt update && sudo apt install -y bzip2 curl xz-utils g++ git
 sudo apt install -y lsb-release wget software-properties-common gnupg
 wget https://apt.llvm.org/llvm.sh
 chmod +x llvm.sh
 sudo ./llvm.sh 19 all
 sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-19 1
 sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 export CHOOSENIM_CHOOSE_VERSION=2.2.2
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
 export PATH=$HOME/.nimble/bin:$PATH
@@ -160,6 +164,14 @@ nimble install https://github.com/zer0-star/Nim-ACL
 sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
+sudo apt install -y python3-dev
+wget https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2
+tar --bzip2 -xf boost_1_87_0.tar.bz2
+cd boost_1_87_0
+./bootstrap.sh --without-libraries=mpi,graph_parallel
+sudo ./b2 install
+sudo ldconfig
+cd /tmp
 '''
 
 # キー: compile
