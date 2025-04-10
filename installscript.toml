@@ -177,7 +177,7 @@ nimble install https://github.com/nim-lang/bigints -y
 #       成功時に後述の object で指定するファイルが生成されるようにコマンドを記述してください
 compile = '''
 export PATH=$HOME/.nimble/bin:$PATH
-nim cpp -d:release --opt:speed --multimethods:on --warning[SmallLshouldNotBeUsed]:off --hints:off -o:a.out Main.nim 
+nim cpp -d:release --opt:speed --multimethods:on --warning[SmallLshouldNotBeUsed]:off --hints:off --maxLoopIterationsVM:10000000000000 --maxCallDepthVM:10000000000000 -o:a.out Main.nim 
 '''
 
 # キー: object
