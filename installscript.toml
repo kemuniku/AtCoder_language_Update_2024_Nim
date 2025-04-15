@@ -111,6 +111,9 @@ library.gmp = { license = [
 library.bigints = { license = [
     { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/v1.1.0/license.txt' },
 ], version = '1.1.0' }
+library.'AC Library' = { license = [
+    { name = 'CC0-1.0', url = 'https://github.com/atcoder/ac-library/blob/v1.5.1/LICENSE' },
+], version =  'v1.5.1' }
 library.mpfr = { license = [
     { name = 'GPL-3.0-or-later', url = 'https://gitlab.inria.fr/mpfr/mpfr/-/raw/4.2.1/COPYING' },
     { name = 'LGPL-3.0-or-later', url = 'https://gitlab.inria.fr/mpfr/mpfr/-/raw/4.2.1/COPYING.LESSER' },
@@ -164,6 +167,9 @@ nimble install https://github.com/zer0-star/Nim-ACL
 sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
+wget https://github.com/atcoder/ac-library/archive/refs/tags/v1.5.1.tar.gz
+tar -xvf v1.5.1.tar.gz
+sudo cp -r ac-library-1.5.1/atcoder /usr/local/include
 sudo apt install -y libmpfr-dev
 '''
 
