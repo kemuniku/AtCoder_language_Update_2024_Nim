@@ -111,6 +111,12 @@ library.gmp = { license = [
 library.bigints = { license = [
     { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/v1.1.0/license.txt' },
 ], version = '1.1.0' }
+library.Eigen = { license = [
+    { name = 'MPL-2.0', url = 'https://gitlab.com/libeigen/eigen/-/blob/3.4.0/COPYING.MPL2' },
+], version =  '3.4.0' }
+library.fftw = { license = [
+    { name = 'GPL-3.0-or-later', url = 'https://fftw.org/fftw3_doc/License-and-Copyright.html' },
+], version =  '3.3.10' }
 library.'AC Library' = { license = [
     { name = 'CC0-1.0', url = 'https://github.com/atcoder/ac-library/blob/v1.5.1/LICENSE' },
 ], version =  'v1.5.1' }
@@ -167,6 +173,12 @@ nimble install https://github.com/zer0-star/Nim-ACL
 sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
+sudo apt install -y libfftw3-dev
+wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
+tar -xvf eigen-3.4.0.tar.gz
+cd eigen-3.4.0
+sudo cp -r Eigen/ unsupported/ /usr/local/include/
+cd /tmp
 wget https://github.com/atcoder/ac-library/archive/refs/tags/v1.5.1.tar.gz
 tar -xvf v1.5.1.tar.gz
 sudo cp -r ac-library-1.5.1/atcoder /usr/local/include
