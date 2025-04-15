@@ -47,7 +47,7 @@ name = 'Nim'
 # 例:   '14.2'
 #       '18.1.8'
 #       '23'
-version = '2.2.0'
+version = '2.2.2'
 
 # キー: license
 # 型:   配列
@@ -72,7 +72,7 @@ version = '2.2.0'
 # 説明: コンパイラ/インタプリタのライセンス
 #       コンパイラ、インタプリタの実装のライセンスを記述してください
 #       デュアルライセンスなど、ライセンスが複数ある場合はすべて記述してください
-license = [{ name = 'MIT license', url = 'https://github.com/nim-lang/Nim/blob/devel/copying.txt' }]
+license = [{ name = 'MIT', url = 'https://github.com/nim-lang/Nim/blob/v2.2.2/copying.txt' }]
 
 # キー: library
 # 型:   テーブル
@@ -96,24 +96,40 @@ license = [{ name = 'MIT license', url = 'https://github.com/nim-lang/Nim/blob/d
 #       そのためインストールスクリプトで記述されるものと一致するようにしてください
 # 例:   boost = { license = [ { name = 'Boost Software License', url = 'https://www.boost.org/LICENSE_1_0.txt' } ], version = '1.86.0' }
 library.neo = { license = [
-    { name = 'Apache-2.0', url = 'https://github.com/andreaferretti/neo/blob/master/LICENSE' },
+    { name = 'Apache-2.0', url = 'https://github.com/andreaferretti/neo/blob/0.3.5/LICENSE' },
 ], version = '0.3.5' }
 library.bignum = { license = [
-    { name = 'MIT', url = 'https://github.com/SciNim/bignum/blob/master/LICENSE' },
-], version = '1.0.0' }
+    { name = 'MIT', url = 'https://github.com/SciNim/bignum/blob/1.0.4/LICENSE' },
+], version = '1.0.4' }
 library.Nim-ACL = { license = [
-    { name = 'CC0 1.0 Universal', url = 'https://github.com/zer0-star/Nim-ACL/blob/master/LICENSE' },
+    { name = 'CC0-1.0', url = 'https://github.com/zer0-star/Nim-ACL/blob/master/LICENSE' },
 ], version =  '0.1.0'}
 library.gmp = { license = [
-    { name = 'GNU GPL v2', url = 'https://gmplib.org/' },
-    { name = 'GNU LGPL v3', url = 'https://gmplib.org/' },
+    { name = 'GPL-2.0-or-later', url = 'https://gmplib.org/repo/gmp-6.3/file/tip/COPYINGv2' },
+    { name = 'LGPL-3.0-or-later', url = 'https://gmplib.org/repo/gmp-6.3/file/tip/COPYING.LESSERv3' },
 ], version =  '6.3.0'}
 library.bigints = { license = [
-    { name = 'MIT License', url = 'https://github.com/nim-lang/bigints/blob/master/license.txt' },
+    { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/v1.1.0/license.txt' },
 ], version = '1.1.0' }
 library.Arraymancer = { license = [
     { name = 'Apache-2.0', url = 'https://github.com/mratsim/Arraymancer/blob/84af537af1bc1f90229fff2b90abf5e5c1b02616/LICENSE' },
 ], version =  '84af537af1bc1f90229fff2b90abf5e5c1b02616' }
+library.boost = { license = [
+    { name = 'BSL-1.0', url = 'https://www.boost.org/users/license.html' },
+], version =  '1.87.0' }
+library.Eigen = { license = [
+    { name = 'MPL-2.0', url = 'https://gitlab.com/libeigen/eigen/-/blob/3.4.0/COPYING.MPL2' },
+], version =  '3.4.0' }
+library.fftw = { license = [
+    { name = 'GPL-3.0-or-later', url = 'https://fftw.org/fftw3_doc/License-and-Copyright.html' },
+], version =  '3.3.10' }
+library.'AC Library' = { license = [
+    { name = 'CC0-1.0', url = 'https://github.com/atcoder/ac-library/blob/v1.5.1/LICENSE' },
+], version =  'v1.5.1' }
+library.mpfr = { license = [
+    { name = 'GPL-3.0-or-later', url = 'https://gitlab.inria.fr/mpfr/mpfr/-/raw/4.2.1/COPYING' },
+    { name = 'LGPL-3.0-or-later', url = 'https://gitlab.inria.fr/mpfr/mpfr/-/raw/4.2.1/COPYING.LESSER' },
+], version = '4.2.1' }
 
 # キー: filename
 # 型:   文字列
@@ -147,13 +163,14 @@ filename = 'Main.nim'
 install = '''
 cd /tmp
 sudo ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime && sudo bash -c 'echo Etc/UTC > /etc/timezone'
-sudo apt update && sudo apt install -y curl xz-utils g++ git
+sudo apt update && sudo apt install -y bzip2 curl xz-utils g++ git
 sudo apt install -y lsb-release wget software-properties-common gnupg
 wget https://apt.llvm.org/llvm.sh
 chmod +x llvm.sh
 sudo ./llvm.sh 19 all
 sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-19 1
 sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 export CHOOSENIM_CHOOSE_VERSION=2.2.2
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
 export PATH=$HOME/.nimble/bin:$PATH
@@ -164,6 +181,24 @@ sudo apt install -y libgmp3-dev
 nimble install bignum -y
 nimble install https://github.com/nim-lang/bigints -y
 nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
+sudo apt install -y python3-dev
+wget https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2
+tar --bzip2 -xf boost_1_87_0.tar.bz2
+cd boost_1_87_0
+./bootstrap.sh --without-libraries=mpi,graph_parallel
+sudo ./b2 install
+sudo ldconfig
+cd /tmp
+sudo apt install -y libfftw3-dev
+wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
+tar -xvf eigen-3.4.0.tar.gz
+cd eigen-3.4.0
+sudo cp -r Eigen/ unsupported/ /usr/local/include/
+cd /tmp
+wget https://github.com/atcoder/ac-library/archive/refs/tags/v1.5.1.tar.gz
+tar -xvf v1.5.1.tar.gz
+sudo cp -r ac-library-1.5.1/atcoder /usr/local/include
+sudo apt install -y libmpfr-dev
 '''
 
 # キー: compile
