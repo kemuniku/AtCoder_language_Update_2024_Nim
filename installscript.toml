@@ -205,11 +205,11 @@ export CHOOSENIM_CHOOSE_VERSION=2.2.2
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
 export PATH=$HOME/.nimble/bin:$PATH
 sudo apt install libopenblas-dev liblapack-dev -y
-nimble install neo -y
-nimble install https://github.com/zer0-star/Nim-ACL
+nimble install neo@0.3.5 -y
+nimble install https://github.com/zer0-star/Nim-ACL@0.1.0 -y
 sudo apt install -y libgmp3-dev
-nimble install bignum -y
-nimble install https://github.com/nim-lang/bigints -y
+nimble install bignum@1.0.4 -y
+nimble install https://github.com/nim-lang/bigints@1.1.0 -y
 nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
 sudo apt install -y python3-dev
 wget https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2
