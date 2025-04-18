@@ -116,7 +116,7 @@ library.Arraymancer = { license = [
 ], version =  '84af537af1bc1f90229fff2b90abf5e5c1b02616' }
 library.boost = { license = [
     { name = 'BSL-1.0', url = 'https://www.boost.org/users/license.html' },
-], version =  '1.87.0' }
+], version =  '1.88.0' }
 library.Eigen = { license = [
     { name = 'MPL-2.0', url = 'https://gitlab.com/libeigen/eigen/-/blob/3.4.0/COPYING.MPL2' },
 ], version =  '3.4.0' }
@@ -197,9 +197,9 @@ sudo apt update && sudo apt install -y bzip2 curl xz-utils g++ git
 sudo apt install -y lsb-release wget software-properties-common gnupg
 wget https://apt.llvm.org/llvm.sh
 chmod +x llvm.sh
-sudo ./llvm.sh 19 all
-sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-19 1
-sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 1
+sudo ./llvm.sh 20 all
+sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-20 1
+sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-20 1
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 export CHOOSENIM_CHOOSE_VERSION=2.2.2
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
@@ -209,12 +209,12 @@ nimble install neo@0.3.5 -y
 nimble install https://github.com/zer0-star/Nim-ACL@0.1.0 -y
 sudo apt install -y libgmp3-dev
 nimble install bignum@1.0.4 -y
-nimble install https://github.com/nim-lang/bigints@1.1.0 -y
+nimble install https://github.com/nim-lang/bigints -y
 nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
 sudo apt install -y python3-dev
-wget https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2
-tar --bzip2 -xf boost_1_87_0.tar.bz2
-cd boost_1_87_0
+wget https://archives.boost.io/release/1.87.0/source/boost_1_88_0.tar.bz2
+tar --bzip2 -xf boost_1_88_0.tar.bz2
+cd boost_1_88_0
 ./bootstrap.sh --without-libraries=mpi,graph_parallel
 sudo ./b2 install
 sudo ldconfig
