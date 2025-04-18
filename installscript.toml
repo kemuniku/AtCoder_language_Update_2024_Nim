@@ -212,8 +212,8 @@ nimble install bignum@1.0.4 -y
 nimble install https://github.com/nim-lang/bigints -y
 nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
 sudo apt install -y python3-dev
-wget https://archives.boost.io/release/1.87.0/source/boost_1_88_0.tar.bz2
-tar --bzip2 -xf boost_1_88_0.tar.bz2
+wget https://archives.boost.io/release/1.88.0/source/boost_1_88_0.tar.gz
+tar -zcvf -xf boost_1_88_0.tar.gz
 cd boost_1_88_0
 ./bootstrap.sh --without-libraries=mpi,graph_parallel
 sudo ./b2 install
