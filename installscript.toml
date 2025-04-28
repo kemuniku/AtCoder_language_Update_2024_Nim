@@ -47,7 +47,7 @@ name = 'Nim'
 # 例:   '14.2'
 #       '18.1.8'
 #       '23'
-version = '2.2.2'
+version = '2.2.4'
 
 # キー: license
 # 型:   配列
@@ -72,7 +72,7 @@ version = '2.2.2'
 # 説明: コンパイラ/インタプリタのライセンス
 #       コンパイラ、インタプリタの実装のライセンスを記述してください
 #       デュアルライセンスなど、ライセンスが複数ある場合はすべて記述してください
-license = [{ name = 'MIT', url = 'https://github.com/nim-lang/Nim/blob/v2.2.2/copying.txt' }]
+license = [{ name = 'MIT', url = 'https://github.com/nim-lang/Nim/blob/v2.2.4/copying.txt' }]
 
 # キー: library
 # 型:   テーブル
@@ -207,7 +207,7 @@ sudo ./llvm.sh 20 all
 sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-20 1
 sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-20 1
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
-export CHOOSENIM_CHOOSE_VERSION=2.2.2
+export CHOOSENIM_CHOOSE_VERSION=2.2.4
 curl https://nim-lang.org/choosenim/init.sh -sSf | bash -s -- -y
 export PATH=$HOME/.nimble/bin:$PATH
 sudo apt install libopenblas-dev liblapack-dev -y
