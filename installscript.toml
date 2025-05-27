@@ -100,7 +100,7 @@ library.neo = { license = [
 ], version = '0.3.5' }
 library.bignum_chaemon = { license = [
     { name = 'MIT', url = 'https://github.com/chaemon/bignum/blob/master/LICENSE' },
-], version = '0.0.1' }
+], version = '1.0.6' }
 library.Nim-ACL = { license = [
     { name = 'CC0-1.0', url = 'https://github.com/zer0-star/Nim-ACL/blob/master/LICENSE' },
 ], version =  '0.1.0'}
@@ -150,7 +150,7 @@ library.nimblas = { license = [
 ], indirect = true, version = '0.3.1'}
 library.nim-gmp_chaemon = { license = [
     {name = 'MIT', url = 'https://github.com/chaemon/nim-gmp/blob/master/COPYING' },
-], indirect = true, version = '0.2.6'}
+], indirect = true, version = '0.2.7'}
 library.opencl = { license = [
     {name = 'MIT', url = 'https://github.com/nim-lang/opencl/blob/v1.0.1/LICENSE' },
 ], indirect = true, version = '1.0.1'}
@@ -220,7 +220,7 @@ sudo apt install libopenblas-dev liblapack-dev -y
 nimble install neo@0.3.5 -y
 nimble install https://github.com/zer0-star/Nim-ACL@0.1.0 -y
 sudo apt install -y libgmp3-dev
-nimble install https://github.com/chaemon/bignum@0.0.1 -y
+nimble install https://github.com/chaemon/bignum@1.0.6 -y
 nimble install https://github.com/nim-lang/bigints@#ca00f6da386af9ad7e3abf603c0201da6a014477 -y
 nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
 nimble install regex@0.26.3 -y
