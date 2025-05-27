@@ -109,8 +109,8 @@ library.gmp = { license = [
     { name = 'LGPL-3.0-or-later', url = 'https://gmplib.org/repo/gmp-6.3/file/tip/COPYING.LESSERv3' },
 ], version =  '6.3.0'}
 library.bigints = { license = [
-    { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/v1.1.0/license.txt' },
-], version = '1.1.0' }
+    { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/ca00f6da386af9ad7e3abf603c0201da6a014477/license.txt' },
+], version = 'ca00f6da386af9ad7e3abf603c0201da6a014477' }
 library.Arraymancer = { license = [
     { name = 'Apache-2.0', url = 'https://github.com/mratsim/Arraymancer/blob/84af537af1bc1f90229fff2b90abf5e5c1b02616/LICENSE' },
 ], version =  '84af537af1bc1f90229fff2b90abf5e5c1b02616' }
@@ -215,7 +215,7 @@ nimble install neo@0.3.5 -y
 nimble install https://github.com/zer0-star/Nim-ACL@0.1.0 -y
 sudo apt install -y libgmp3-dev
 nimble install https://github.com/chaemon/bignum@0.0.1 -y
-nimble install https://github.com/nim-lang/bigints -y
+nimble install https://github.com/nim-lang/bigints@#ca00f6da386af9ad7e3abf603c0201da6a014477 -y
 nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
 nimble install regex@0.26.3 -y
 sudo apt install -y python3-dev
