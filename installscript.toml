@@ -109,8 +109,8 @@ library.gmp = { license = [
     { name = 'LGPL-3.0-or-later', url = 'https://gmplib.org/repo/gmp-6.3/file/tip/COPYING.LESSERv3' },
 ], version =  '6.3.0'}
 library.bigints = { license = [
-    { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/v1.1.0/license.txt' },
-], version = '1.1.0' }
+    { name = 'MIT', url = 'https://github.com/nim-lang/bigints/blob/ca00f6da386af9ad7e3abf603c0201da6a014477/license.txt' },
+], version = 'ca00f6da386af9ad7e3abf603c0201da6a014477' }
 library.Arraymancer = { license = [
     { name = 'Apache-2.0', url = 'https://github.com/mratsim/Arraymancer/blob/84af537af1bc1f90229fff2b90abf5e5c1b02616/LICENSE' },
 ], version =  '84af537af1bc1f90229fff2b90abf5e5c1b02616' }
@@ -120,6 +120,9 @@ library.regex = { license = [
 library.nimsimd = { license = [
     { name = 'MIT', url = 'https://github.com/guzba/nimsimd/blob/1.3.2/LICENSE' },
 ], version = '1.3.2' }
+library.sat = { license = [
+    { name = 'MIT', url = 'https://github.com/nim-lang/sat/blob/faf1617f44d7632ee9601ebc13887644925dcc01/LICENSE' },
+], version = 'faf1617f44d7632ee9601ebc13887644925dcc01' }
 library.boost = { license = [
     { name = 'BSL-1.0', url = 'https://www.boost.org/users/license.html' },
 ], version =  '1.88.0' }
@@ -218,10 +221,11 @@ nimble install neo@0.3.5 -y
 nimble install https://github.com/zer0-star/Nim-ACL@0.1.0 -y
 sudo apt install -y libgmp3-dev
 nimble install https://github.com/chaemon/bignum@0.0.1 -y
-nimble install https://github.com/nim-lang/bigints -y
+nimble install https://github.com/nim-lang/bigints@#ca00f6da386af9ad7e3abf603c0201da6a014477 -y
 nimble install arraymancer@#84af537af1bc1f90229fff2b90abf5e5c1b02616 -y
 nimble install regex@0.26.3 -y
 nimble install nimsimd@1.3.2 -y
+nimble install https://github.com/nim-lang/sat@#faf1617f44d7632ee9601ebc13887644925dcc01 -y
 sudo apt install -y python3-dev
 wget https://archives.boost.io/release/1.88.0/source/boost_1_88_0.tar.gz
 tar -xf boost_1_88_0.tar.gz
